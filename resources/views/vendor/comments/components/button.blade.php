@@ -16,12 +16,12 @@
         {{ $slot }}
     </x-filament-support::link>
 @else
-    <x-button
+    <x-filament-support::button
         :type="$submit ? 'submit' : 'button'"
         :color="$danger ? 'danger' : null"
         size="sm"
         :attributes="$attributes"
     >
         {{ $slot }}
-    </x-button>
+    </x-filament-support::button>
 @endif

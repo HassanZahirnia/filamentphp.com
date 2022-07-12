@@ -6,6 +6,7 @@ use App\Enums\ArticleCategory;
 use App\Enums\ArticleStatus;
 use App\Filament\Resources\ArticleResource\Pages;
 use App\Filament\Resources\ArticleResource\RelationManagers;
+use App\Filament\Resources\RelationManagers\CommentsRelationManager;
 use App\Models\Article;
 use Closure;
 use Filament\Forms;
@@ -90,7 +91,7 @@ class ArticleResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            CommentsRelationManager::class,
         ];
     }
 

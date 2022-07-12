@@ -4,6 +4,7 @@ namespace App\Filament\Resources\ArticleResource\Pages;
 
 use App\Enums\ArticleStatus;
 use App\Filament\Resources\ArticleResource;
+use App\Filament\Resources\Widgets\Comments;
 use Filament\Pages\Actions\Action;
 use Filament\Pages\Actions\ButtonAction;
 use Filament\Resources\Pages\EditRecord;
@@ -91,6 +92,13 @@ class EditArticle extends EditRecord
     {
         return [
             ArticleResource\Widgets\EditArticleHeader::class,
+        ];
+    }
+
+    protected function getFooterWidgets(): array
+    {
+        return [
+            Comments::class,
         ];
     }
 
